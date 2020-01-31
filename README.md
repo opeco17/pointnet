@@ -1,7 +1,7 @@
 # PointNet
 Implementation of PointNet by Pytorch. (https://arxiv.org/abs/1612.00593)
 
-This is the explanation of PointNet as I wrote.
+This is the explanation of PointNet as I wrote. (https://qiita.com/yuto_hito/items/707a5c57bca41a145122)
 
 To check varidity of PointNet, I experiment the 2 classification task.
 
