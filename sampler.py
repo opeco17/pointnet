@@ -11,5 +11,5 @@ def data_sampler(batch_size, num_points):
     labels = torch.cat((normal_labels, uniform_labels), dim=0)
 
     data_shuffle = torch.randperm(batch_size)
-    
+  
     return input_data[data_shuffle].view(-1, 3), labels[data_shuffle].view(-1, 1)
