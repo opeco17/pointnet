@@ -25,8 +25,15 @@ for iteration in range(10000+1):
     error.backward()
     
     optimizer.step()
-
-    loss_list.append(error.item())
     
+    with torch.no_grad():
+        output[output > 0.5] = 1
+        output[output < 0.5] = 0
+        accuracy = (output==labels).sum().item()/batch_size
+            
+    loss_list.append(error.item())
+    accuracy_list.append(accuracy)
+            
     if iteration % 10 == 0:
         print('Iteration : {}   Loss : {}'.format(iteration, error.item()))
+        print('Iteration : {}   Accuracy : {}'.format(iteration, accuracy))
