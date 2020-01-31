@@ -11,6 +11,7 @@ criterion = nn.BCELoss()
 optimizer = optim.Adam(pointnet.parameters(), lr=0.001)
 
 loss_list = []
+accuracy_list = []
 
 for iteration in range(10000+1):
     
